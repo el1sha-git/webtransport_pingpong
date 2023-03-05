@@ -51,13 +51,6 @@ async def main():
     await asyncio.Future()
 
 
-# except KeyboardInterrupt:
-#     logger.info("Shutdown server")
-#     for task in asyncio.all_tasks():
-#         task.cancel()
-#     # wait for all tasks to be cancelled
-#     await asyncio.gather(*asyncio.all_tasks())
-
 
 if __name__ == "__main__":
     logger = logging.getLogger("aioquic_server")
@@ -84,4 +77,3 @@ if __name__ == "__main__":
         logger.critical("Cant create event loop. Aborting...")
         exit(1)
 
-    # asyncio.run(main())
